@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Chat</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <div class="chat-app" id="chat-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2 id="user-welcome">Chat</h2>
+                <button id="logout-btn" class="logout-btn">Logout</button>
+            </div>
+            <div class="nav-section">
+                <div class="nav-item active" id="global-chat-btn">
+                    <span>Global Chat</span>
+                </div>
+
+                <div class="sidebar-forms">
+                    <div class="sidebar-form-group">
+                        <span>Direct Message</span>
+                        <input type="email" id="target-email" placeholder="Email address">
+                        <button id="join-dm-btn" style="padding: 8px;">Chat</button>
+                    </div>
+                    <div class="sidebar-form-group">
+                        <span>Custom Room</span>
+                        <input type="text" id="custom-room" placeholder="Room name">
+                        <button id="join-room-btn" style="padding: 8px;">Join</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="main-chat">
+            <header class="chat-header">
+                <h3 id="current-room-display">Room: Global Chat</h3>
+                <div id="typing-indicator" style="font-size: 0.8rem; color: var(--text-muted); height: 16px;"></div>
+            </header>
+
+            <div id="messages">
+                <!-- Messages will appear here -->
+            </div>
+
+            <footer class="chat-input-area">
+                <div id="ai-suggestions"></div>
+                <form id="chat-form">
+                    <input type="file" id="file-input">
+                    <input type="text" id="message-input" placeholder="Type your message..." autocomplete="off">
+                    <button type="button" id="smart-reply-btn">Smart Reply</button>
+                    <button type="submit">Send</button>
+                </form>
+            </footer>
+        </main>
+    </div>
+
+    <script src="/js/chat.js"></script>
+</body>
+</html>
