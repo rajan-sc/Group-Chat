@@ -1,8 +1,12 @@
-# Chat
+# ChatApp
 
- Chat is a full-stack, real-time chat application. It allows users to register, log in, join a default "Global Chat", communicate in direct messages or custom rooms, share files via AWS S3, and utilize Google Gemini AI for smart reply generation and message autocompletion.
+ ChatApp is a full-stack, real-time chat application. It allows users to register, log in, join a default "Global Chat", communicate in direct messages or custom rooms, share files via AWS S3, and utilize Google Gemini AI for smart reply generation and message autocompletion.
 
 This project demonstrates advanced websocket communication, secure authentication, external cloud storage integration, and AI-assisted UX paradigms.
+
+## Screenshot
+
+![ChatApp Screenshot](screenshots/chatapp.png)
 
 ## Features
 
